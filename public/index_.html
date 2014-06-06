@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Ingredient Substitution Module</title>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="css/index.css"/>
+        <link rel="icon" type="image/ico" href="images/stock_node-convert.png"/>
+        <link rel="stylesheet" type="text/css" href="css/renderjson.css"/>
+        <link rel="stylesheet" href="style/halfviz.css" type="text/css" charset="utf-8">
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/buttons.css"/>
+    </head>
+    
+    <body>
+    	<h1>Ingredient substitution module</h1>
+
+    	<h2>Search</h2>
+    	<p>Find subsitutes for ingredients stored in the Graph Database Neo4J</p>
+
+    	<label for="ingredient">Ingredient: </label>
+    	<input id='ingredient' type="text" size="25" value="sugar">
+
+    	<label for="allergy">Allergie</label>
+    	<select id='allergy'>
+    		<option value="none">None</option>
+		  	<option value="lactose">Lactose</option>
+		  	<option value="gluten">Gluten</option>
+		</select>
+
+		<label for="male">Context</label>
+		<select>
+    		<option value="none">None</option>
+		  	<option value="lactose">Dessert</option>
+		  	<option value="gluten">Starter</option>
+		  	<option value="gluten">Main dish</option>
+		</select>
+
+		<button id="process" class="cupid-tiny" ><i class="icon-cogs"></i> Process</button>
+
+
+		<br/>
+		<br/>
+		Mouse is over the node: <b><span id='response'></span></b>
+		<br/>
+		<br/>
+
+		<h2>Edition</h2>
+
+		<label for="ingredient-to-replace">Ingredient: </label>
+    	<input id='ingredient-to-replace' type="text" size="25" value="sugar">
+    	can be replaced by
+    	<input id='ingredient-to-replace-with' type="text" size="25" value="stevia">
+    	<button id="add-substitution-button" class="cupid-tiny" ><i class="icon-exchange"></i> Add substitution</button>
+
+		<div id="halfviz">
+			<canvas id="viewport"></canvas>
+		</div>
+
+		<script src="scripts/jquery-1.6.1.min.js"></script>
+		<!--<script src="scripts/jquery-1.10.2.min.js"></script>-->
+		<script src="scripts/arbor/arbor.js"></script>
+		<script src="scripts/arbor/arbor-tween.js"></script>
+		<script src="scripts/arbor/graphics.js"></script>
+
+		<script src="scripts/jquery.collapse.js" type="text/javascript"></script>
+	    <script src="scripts/jquery.renderjson.js" type="text/javascript"></script>
+	    <script src="scripts/main.js" type="text/javascript"></script>
+
+		<script src="scripts/arbor/parseur.js"></script>
+		<script src="scripts/arbor/renderer.js"></script>
+
+		<!-- the main driver code: start here -->
+		<script src="scripts/arbor/halfviz.js"></script> 
+
+    </body>
+</html>

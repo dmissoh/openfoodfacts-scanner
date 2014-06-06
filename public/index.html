@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<meta charset=utf-8>
+<html lang="en">
+	<head>
+		<title>Open Food Facts - BarcodeReader</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link rel="icon" type="image/ico" href="images/barcode.png"/>
+	</head>
+	<body>
+
+		<h1>Food Fact Retriever</h1>
+
+		<p>
+			This app scans a given barcode picture and request the <a href='http://fr.openfoodfacts.org/'>http://fr.openfoodfacts.org/</a> page for details.
+		</p>
+
+		<div id="container">
+			<img width="320" height="240" src="about:blank" alt="" id="picture">
+			<input id="Take-Picture" type="file" accept="image/*;capture=camera" />
+
+			<p id="textbit"></p>
+
+			<p id="product"></p>
+		</div>
+		<script src="scripts/jquery-1.10.2.min.js"></script>
+		<script src="scripts/index.js"></script>
+	</body>
+</html>
+					

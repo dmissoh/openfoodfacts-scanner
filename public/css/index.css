@@ -1,0 +1,11 @@
+body {
+  font-family: "Open Sans";
+  font-size: 13px;
+  color: #636363;
+}
+
+.title{
+	margin-bottom: 5px;
+	text-transform: uppercase;
+}
+
